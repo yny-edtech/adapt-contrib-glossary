@@ -9,7 +9,8 @@ First, add the audio partial to the Handlebars template. You can find it here:
 
         <!--add audio controls partial for description-->
         {{> audio-controls this}}
-        
+
+### Step Two
 You then need to go to /src/course/en/course.json 
 
                 "_glossaryItems": [
@@ -26,6 +27,29 @@ You then need to go to /src/course/en/course.json
             }
         ]
     },
+
+
+### Step Three
+Finally, add the click event and handler fuction. You add this to: src/extensions/adapt-contrib-glossary/js
+
+        /**
+         * added click event to audio control*/
+        events: {
+            'click .glossary-item-term': 'onGlossaryItemClicked',
+            'click .audio-controls .icon':'onAudioCtrlsClick'
+
+        },
+        
+          /**
+         * added handler function that triggers the 'audio' event on the Adapt object, passing in the current event target*/
+   
+        onAudioCtrlsClick: function(event) {
+	           if (event) event.preventDefault();
+	           Adapt.trigger('audio', event.currentTarget);
+        },
+
+
+
 
 
 **Glossary** is an *extension* for the [Adapt framework](https://github.com/adaptlearning/adapt_framework).
