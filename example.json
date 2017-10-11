@@ -1,4 +1,6 @@
 // To go in the course.json file
+// _audio attribute added at line 15 - 17 (in the description)
+
 "_glossary": {
     "_isEnabled": true,
     "title": "Glossary",
@@ -9,7 +11,10 @@
     "_glossaryItems": [
         {
             "term": "About Framework",
-            "description": "The Adapt Framework is a generic, reusable codebase for e-learning courses. <br/>The Adapt Framework is designed to work with the Adapt Authoring Tool (as soon as this is released) but can also be used in isolation."
+            "description": "The Adapt Framework is a generic, reusable codebase for e-learning courses. <br/>The Adapt Framework is designed to work with the Adapt Authoring Tool (as soon as this is released) but can also be used in isolation.",
+            "_audio": {
+                    "mp3": "course/en/audio/audio.mp3"
+            }
         },
         {
             "term": "Framework Examples",
