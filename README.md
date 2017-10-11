@@ -1,5 +1,33 @@
 # adapt-contrib-glossary
 
+## How to add audio
+
+### Step One
+
+First, add the audio partial to the Handlebars template. You can find it here: 
+/src/extensions/adapt-contrib-glossary/templates/glossaryItem.hbs
+
+        <!--add audio controls partial for description-->
+        {{> audio-controls this}}
+        
+You then need to go to /src/course/en/course.json 
+
+                "_glossaryItems": [
+            {
+                "term": "activity leader",
+                "description": "animateur / animatrice",
+                "_audio": {
+                    "mp3": "course/en/audio/audio.mp3"
+                }
+            },
+            {
+                "term": "child / children",
+                "description": "enfant(s)"
+            }
+        ]
+    },
+
+
 **Glossary** is an *extension* for the [Adapt framework](https://github.com/adaptlearning/adapt_framework).
 
 <img src="https://github.com/adaptlearning/documentation/blob/master/04_wiki_assets/plug-ins/images/glossary.gif" width='548' height='497' alt="demonstration of how the glossary looks and functions"> 
