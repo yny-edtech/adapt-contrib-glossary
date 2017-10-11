@@ -7,9 +7,23 @@ define(function(require) {
 
         className: "glossary-item",
 
+       /**
+         * added click event to audio control*/
         events: {
-            'click .glossary-item-term': 'onGlossaryItemClicked'
+            'click .glossary-item-term': 'onGlossaryItemClicked',
+            'click .audio-controls .icon':'onAudioCtrlsClick'
+
         },
+        
+          /**
+         * added handler function that triggers the 'audio' event on the Adapt object, passing in the current event target*/
+   
+        onAudioCtrlsClick: function(event) {
+	           if (event) event.preventDefault();
+	           Adapt.trigger('audio', event.currentTarget);
+        },
+        
+        
 
         initialize: function() {
             this.listenTo(Adapt, "remove drawer:closed", this.remove);
