@@ -1,5 +1,8 @@
 # adapt-contrib-glossary
 
+Prerequisites: 
+1. Install the extension adapt audio: https://github.com/mike-st/adapt-audio
+
 ## How to add audio
 
 ### Step One
